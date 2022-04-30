@@ -5,6 +5,9 @@ import { useState } from "react";
 import ExpensesList from "./ExpensesList";
 
 import "./RenderExpenses.css";
+import ExpenseChart from "./ExpenseChart";
+
+console.log("RenderExpenses");
 
 function RenderExpenses(props) {
   const [year, setYear] = useState("2021");
@@ -18,11 +21,13 @@ function RenderExpenses(props) {
   );
 
   return (
-    <Card className="expenses">
-      <ExpensesFilter activeYear={year} onYearChange={onYearChangeHandler} />
-      {/* {expenseContent} */}
-      <ExpensesList items={filteredExpenses} />
-    </Card>
+    <div>
+      <Card className="expenses">
+        <ExpensesFilter activeYear={year} onYearChange={onYearChangeHandler} />
+        <ExpenseChart expenses={filteredExpenses} />
+        <ExpensesList items={filteredExpenses} />
+      </Card>
+    </div>
   );
 }
 

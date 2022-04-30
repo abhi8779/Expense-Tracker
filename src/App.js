@@ -1,5 +1,8 @@
 import RenderExpenses from "./components/Expenses/RenderExpenses";
 import NewExpense from "./components/NewExpense/NewExpense";
+
+import Chart from "./components/Charts/Chart";
+
 import { useState } from "react";
 
 import React from "react";
@@ -41,7 +44,6 @@ const App = () => {
 
   const onSaveNewExpensesHandler = (enteredExpenseData) => {
     // expenses.push(enteredExpenseData);
-    console.log(enteredExpenseData);
     setExpenses((prevExpenses) => {
       return [enteredExpenseData, ...prevExpenses];
     });
@@ -50,6 +52,7 @@ const App = () => {
   return (
     <div>
       <NewExpense onSaveNewExpenses={onSaveNewExpensesHandler} />
+
       <RenderExpenses data={expenses} />
     </div>
   );
