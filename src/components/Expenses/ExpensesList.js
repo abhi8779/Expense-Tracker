@@ -19,19 +19,6 @@ const ExpensesList = (props) => {
       ))}
     </ul>
   );
-
-  //   return props.items.length > 0 ? (
-  //     props.items.map((expense) => (
-  //       <ExpenseItem
-  //         key={expense.id}
-  //         title={expense.title}
-  //         amount={expense.amount}
-  //         date={expense.date}
-  //       />
-  //     ))
-  //   ) : (
-  //     <p>No Expense Found ⚠️</p>
-  //   );
 };
 
 export default ExpensesList;

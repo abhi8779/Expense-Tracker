@@ -51,10 +51,6 @@ const ExpenseForm = (props) => {
     console.log(enteredData.enteredAmount);
   };
   const dateChangeHandler = (event) => {
-    // setEnteredData({
-    //   ...enteredData,
-    //   enteredDate: event.target.value,
-    // });
     setEnteredData((prevState) => {
       return { ...prevState, enteredDate: event.target.value };
     });

@@ -32,18 +32,7 @@ const App = () => {
 
   const [expenses, setExpenses] = useState(DUMMY_DATA);
 
-  // const expenses =
-
-  /////Treditional Way of writing JSX/////
-  // return React.createElement(
-  //   "div",
-  //   {},
-  //   React.createElement("h2", {}, "Lets get started"),
-  //   createElement(RenderExpenses, { data: expenses })
-  // );
-
   const onSaveNewExpensesHandler = (enteredExpenseData) => {
-    // expenses.push(enteredExpenseData);
     setExpenses((prevExpenses) => {
       return [enteredExpenseData, ...prevExpenses];
     });

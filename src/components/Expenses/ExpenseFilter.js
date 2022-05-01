@@ -3,12 +3,8 @@ import React from "react";
 import "./ExpenseFilter.css";
 
 const ExpensesFilter = (props) => {
-  // const [year, setYear] = useState("2022");
-
   const yearChangeHandler = (e) => {
-    // setYear(e.target.value);
     props.onYearChange(e.target.value);
-    // console.log(props.activeYear);
   };
 
   return (
